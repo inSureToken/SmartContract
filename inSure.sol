@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.16;
 
 interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public; }
 // ---
@@ -25,7 +25,7 @@ contract TokenERC20  {
      *
      * Initializes contract with initial supply tokens to the creator of the contract
      */
-    function constructor(
+    function TokenERC20(
         uint256 initialSupply,
         string tokenName,
         string tokenSymbol
@@ -150,4 +150,5 @@ contract TokenERC20  {
         Burn(_from, _value);
         return true;
     }
+
 }
